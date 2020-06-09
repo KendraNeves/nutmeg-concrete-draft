@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-image: url("../img/concrete-wall.jpg");
+  min-height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page {
+  /* background-image: url("images/concrete-wall.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /*Places 'main' box in horizontal center of page*/
+  width: 100vw;
+  height: 100vh;
+}
+
+/*----- Header/Navbar------------------------------------------ */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.clicky {
+  color: #cc5803; /*burnt orange*/
+  text-decoration: none;
+  padding: 10px;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.clicky:hover {
+  font-weight: 700;
+  border-bottom: 4px dotted;
+  padding: 6.5px;
+  padding-bottom: 0;
+  border-radius: 5px;
+}
+
+.clicky:active {
+  /*When you click on button, it changes color for split second*/
+  color: #594e36; /*brown*/
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+}
+
+.logo {
+  font-size: 58px;
+  font-family: "Saira stencil one", arial, sans-serif;
+  line-height: 1;
+  margin-left: 70px;
+  height: 250px;
+  width: 300px;
+  color: #594e36; /*Brown*/
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar {
+  list-style-type: none;
+  margin-top: 15px;
+  margin-right: 40px;
+  /* padding: 20px; /*moves whole nav bar slightly away from top right corner */
+  overflow: hidden;
+  text-decoration: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.navbar > li {
+  display: inline; /*Without this, navbar becomes a column, not a row. IDK why*/
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+.navbar > li:last-of-type {
+  margin-right: 50;
+}
+/* ------------------------------------------------------------------ */
+
+/* --------Main------------------------------------------------------- */
+main {
+  display: flex;
+  align-items: center; /*Places 'statemtent' box (thats inside 'main') vertically center*/
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 75px;
+}
+
+.statement {
+  color: #5e6572; /*cadet grey-blue*/
+  align-self: center;
+  width: 650px; /*fixed width*/
+  margin-left: 125px;
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 400;
+}
+/* ------------------------------------------------------------------ */
+
+/* -------Footer------------------------------------------------------- */
+footer {
+  width: 100%;
+  color: #594e36; /*Brown*/
+  height: 105px;
+  font-size: 24px;
+  display: flex;
+  align-items: center; /* aligns phone # & email in vertical center*/
+  margin-top: auto;
+}
+
+.contact {
+  text-decoration: none; /*no underline for link */
+  width: 100%;
+}
+
+address {
+  width: 100%;
+  height: 100%;
+}
+
+.footsy {
+  display: block;
+  float: right;
+  width: 400px;
+  text-align: right;
+  margin-right: 30px;
+  line-height: 0;
+}
+
+.footsy > li {
+  list-style: none;
+  font-style: normal; /*No italic phone # */
+}
+
+.icon {
+  position: relative;
+  top: 12px; /*postitions icons in line with words*/
+}
+
+.created {
+  position: relative;
+  top: 50px;
+  font-size: 12px;
+  right: 30px;
+}
+/* ---------------------------------------------------------------------- */
+
+/* PROJECT PAGE */
+
+/* -----------Project Page Header---------------------------------------- */
+.title {
+  font-size: 75px;
+  color: #594e36; /*Brown*/
+  font-family: "Saira stencil one", arial, sans-serif;
+  position: absolute; /*I'm able to position relative to PAGE instead of box that its in */
+  top: 50px; /*Moves down 50px from top of page*/
+  left: 70px; /*Moves Right 70px on page*/
+}
+
+.pictures {
+  display: flex;
+  padding: 1px 1px;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.grid-item {
+  margin: 10px;
+  max-width: 30%;
+  height: auto; /*keeps original aspect ratio of image*/
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.static {
+  position: static; /*So when you scroll on project page, navbar doesn't overlap pictures */
+}
+/* ----------------------------------------------------------------- */
+
+/* ---------Contact Us Page------------------------------------------ */
+.bod {
+  line-height: 1.3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-header {
+  text-align: center;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+
+  width: 50%;
+  margin: 100px 0 20px;
+  padding: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  width: 80%;
+  padding: 10px;
+  margin: 0 0 40px 0;
+}
+
+.form-row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+  /* background-color: #FFFFFF; */
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form-row label {
+  margin-bottom: 15px;
+}
+
+.form-row input[type='text']:invalid, /*Tells user if they've put incorrect input in */
+.form-row input[type='email']:invalid {
+  border: 1px solid #d55c5f;
+  color: #d55c5f;
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
+
+.form-row textarea {
+  font-size: 14px;
+
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
+}
+
+.form-row:last-of-type {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.form-header:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 700px) {
+  .speaker-form-header,
+  .speaker-form {
+    width: 600px;
+  }
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  .form-row select,
+  .form-row textarea {
+    width: 250px;
+    height: initial;
+  }
+  .form-row label {
+    text-align: right;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
+}
